@@ -1,7 +1,17 @@
 {
-  "name": "instagramClone",
+  "name": "instagram-clone",
   "version": "0.0.1",
   "private": true,
+  "keywords": [
+    "js",
+    "instagram clone",
+    "firebase",
+    "redux",
+    "reactjs",
+    "hooks"
+  ],
+  "license": "MIT",
+  "auther": "jscodelover",
   "scripts": {
     "start": "react-native start",
     "test": "jest",
@@ -23,5 +33,12 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jscodelover/instagram-clone.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jscodelover/instagram-clone.git/issues"
   }
 }
