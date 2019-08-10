@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
 		justifyContent: 'space-between',
 		height: 50,
 		borderBottomWidth: StyleSheet.hairlineWidth,
-		borderBottomColor: 'rgb(233,233,233)',
+		borderBottomColor: 'rgb(213,213,213)',
 		paddingHorizontal: 10
 	}
 });
