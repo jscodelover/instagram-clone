@@ -9,22 +9,20 @@ const style = StyleSheet.create({
 		flexDirection: 'row',
 		alignItems: 'center',
 		marginHorizontal: 15
+	},
+
+	postTextBold: {
+		color: 'rgb(38, 38, 38)',
+		fontSize: 14,
+		fontWeight: 'bold'
 	}
 });
 
 const postHeader = StyleSheet.create({
 	image: {
-		width: 38,
-		height: 38,
 		borderRadius: 50,
 		resizeMode: 'cover',
 		marginRight: 10
-	},
-	nameContainer: {},
-	postUser: {
-		color: 'rgb(38, 38, 38)',
-		fontSize: 14,
-		fontWeight: 'bold'
 	},
 	location: {
 		fontSize: 12,
@@ -32,12 +30,14 @@ const postHeader = StyleSheet.create({
 	}
 });
 
-// I want image to have full width and height auto.
 const post = StyleSheet.create({
 	image: {
-		width: Dimensions.get('window').width,
-		height: Dimensions.get('window').width,
 		resizeMode: 'cover'
+	},
+	postLikes: {
+		height: 45,
+		marginLeft: 18,
+		justifyContent: 'center'
 	}
 });
 
