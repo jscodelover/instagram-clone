@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Text, Image, Dimensions } from 'react-native';
+import { View, Text, Dimensions } from 'react-native';
+import InstaImage from '../InstaImage';
 import { style, postHeader, post, postFooter } from './styles';
-import InstaImage from './InstaImage';
 
 function Post() {
 	return (
