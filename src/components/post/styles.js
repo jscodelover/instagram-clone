@@ -4,11 +4,16 @@ const style = StyleSheet.create({
 	container: {
 		backgroundColor: 'rgb(255, 255, 255)'
 	},
+	wrapper: {
+		flexDirection: 'row',
+		justifyContent: 'space-between',
+		alignItems: 'center',
+		marginHorizontal: 15
+	},
 	headerFooter: {
 		height: 60,
 		flexDirection: 'row',
-		alignItems: 'center',
-		marginHorizontal: 15
+		alignItems: 'center'
 	},
 
 	postTextBold: {
@@ -36,15 +41,30 @@ const post = StyleSheet.create({
 	},
 	postLikes: {
 		height: 45,
-		marginLeft: 18,
-		justifyContent: 'center'
+		marginLeft: 20,
+		justifyContent: 'flex-start',
+		alignItems: 'center',
+		flexDirection: 'row'
 	}
 });
 
 const postFooter = StyleSheet.create({
 	footer: {
 		borderBottomColor: 'rgb(210, 210, 210)',
-		borderBottomWidth: StyleSheet.hairlineWidth
+		borderBottomWidth: StyleSheet.hairlineWidth,
+		marginHorizontal: 15
+	},
+	image: {
+		width: 30,
+		height: 30,
+		marginRight: 18,
+		tintColor: 'rgb(47, 47, 47)'
+	},
+	imageLike: {
+		width: 15,
+		height: 15,
+		marginRight: 7,
+		tintColor: 'rgb(47, 47, 47)'
 	}
 });
 

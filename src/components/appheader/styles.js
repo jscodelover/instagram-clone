@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
 		height: 50,
 		borderBottomWidth: StyleSheet.hairlineWidth,
 		borderBottomColor: 'rgb(213,213,213)',
-		paddingHorizontal: 10
+		paddingHorizontal: 15
 	}
 });
 

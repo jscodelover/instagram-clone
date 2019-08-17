@@ -1,25 +1,44 @@
 import React from 'react';
-import { View, Text, Dimensions } from 'react-native';
+import {
+	View,
+	Text,
+	Dimensions,
+	TouchableWithoutFeedback,
+	Image
+} from 'react-native';
 import InstaImage from '../InstaImage';
+import { ImagePath } from '../../utils/contants';
 import { style, postHeader, post, postFooter } from './styles';
 
 function Post() {
 	return (
 		<View style={style.container}>
-			<View style={style.headerFooter}>
-				<InstaImage
-					style={postHeader.image}
-					width={38}
-					height={38}
-					source={{
-						uri:
-							'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
-					}}
-				/>
-				<View>
-					<Text style={style.postTextBold}>Jscodelover</Text>
-					<Text style={postHeader.location}>delhi</Text>
+			<View style={style.wrapper}>
+				<View style={style.headerFooter}>
+					<InstaImage
+						style={postHeader.image}
+						width={38}
+						height={38}
+						source={{
+							uri:
+								'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
+						}}
+					/>
+					<View>
+						<Text style={style.postTextBold}>Jscodelover</Text>
+						<Text style={postHeader.location}>delhi</Text>
+					</View>
 				</View>
+				<TouchableWithoutFeedback
+					onPress={() => {
+						alert('more');
+					}}
+					hitSlop={{ top: 20, bottom: 20, left: 20, right: 20 }}
+				>
+					<View>
+						<Image style={{ width: 15, height: 15 }} source={ImagePath.more} />
+					</View>
+				</TouchableWithoutFeedback>
 			</View>
 			<InstaImage
 				width={Dimensions.get('window').width}
@@ -29,11 +48,39 @@ function Post() {
 				}}
 			/>
 			<View style={[style.headerFooter, postFooter.footer]}>
-				<Text>like</Text>
-				<Text>comment</Text>
-				<Text>share</Text>
+				<TouchableWithoutFeedback
+					onPress={() => {
+						alert('heart');
+					}}
+					hitSlop={{ top: 20, bottom: 20, left: 20, right: 20 }}
+				>
+					<View>
+						<Image style={postFooter.image} source={ImagePath.heart} />
+					</View>
+				</TouchableWithoutFeedback>
+				<TouchableWithoutFeedback
+					onPress={() => {
+						alert('comment');
+					}}
+					hitSlop={{ top: 20, bottom: 20, left: 20, right: 20 }}
+				>
+					<View>
+						<Image style={postFooter.image} source={ImagePath.comment} />
+					</View>
+				</TouchableWithoutFeedback>
+				<TouchableWithoutFeedback
+					onPress={() => {
+						alert('share');
+					}}
+					hitSlop={{ top: 20, bottom: 20, left: 20, right: 20 }}
+				>
+					<View>
+						<Image style={postFooter.image} source={ImagePath.share} />
+					</View>
+				</TouchableWithoutFeedback>
 			</View>
 			<View style={[post.postLikes, postFooter.footer]}>
+				<Image style={postFooter.imageLike} source={ImagePath.fillHeart} />
 				<Text style={style.postTextBold}>132 likes</Text>
 			</View>
 		</View>
