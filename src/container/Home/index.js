@@ -1,10 +1,14 @@
 import React from 'react';
-import { View, Text, TouchableWithoutFeedback, Image } from 'react-native';
+import {
+	View,
+	Text,
+	TouchableWithoutFeedback,
+	Image,
+	FlatList
+} from 'react-native';
 import { AppHeader, Post } from '../../components';
 import { ImagePath } from '../../utils/contants';
 import { styles } from './styles';
-
-console.log(ImagePath);
 
 function Home() {
 	return (
@@ -32,7 +36,11 @@ function Home() {
 					</View>
 				</TouchableWithoutFeedback>
 			</AppHeader>
-			<Post />
+			<FlatList
+				data={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+				renderItem={() => <Post />}
+				keyExtractor={item => item}
+			/>
 		</View>
 	);
 }

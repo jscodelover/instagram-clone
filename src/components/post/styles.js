@@ -41,7 +41,7 @@ const post = StyleSheet.create({
 	},
 	postLikes: {
 		height: 45,
-		marginLeft: 20,
+		paddingLeft: 20,
 		justifyContent: 'flex-start',
 		alignItems: 'center',
 		flexDirection: 'row'
@@ -53,6 +53,10 @@ const postFooter = StyleSheet.create({
 		borderBottomColor: 'rgb(210, 210, 210)',
 		borderBottomWidth: StyleSheet.hairlineWidth,
 		marginHorizontal: 15
+	},
+	likeFooter: {
+		marginHorizontal: 0,
+		marginBottom: 10
 	},
 	image: {
 		width: 30,

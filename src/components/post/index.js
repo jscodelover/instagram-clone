@@ -79,7 +79,7 @@ function Post() {
 					</View>
 				</TouchableWithoutFeedback>
 			</View>
-			<View style={[post.postLikes, postFooter.footer]}>
+			<View style={[post.postLikes, postFooter.footer, postFooter.likeFooter]}>
 				<Image style={postFooter.imageLike} source={ImagePath.fillHeart} />
 				<Text style={style.postTextBold}>132 likes</Text>
 			</View>
