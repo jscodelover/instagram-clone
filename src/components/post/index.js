@@ -52,7 +52,7 @@ function Post() {
 					onPress={() => {
 						alert('heart');
 					}}
-					hitSlop={{ top: 20, bottom: 20, left: 20, right: 20 }}
+					hitSlop={{ top: 15, bottom: 15, left: 2, right: 2 }}
 				>
 					<View>
 						<Image style={postFooter.image} source={ImagePath.heart} />
@@ -62,7 +62,7 @@ function Post() {
 					onPress={() => {
 						alert('comment');
 					}}
-					hitSlop={{ top: 20, bottom: 20, left: 20, right: 20 }}
+					hitSlop={{ top: 15, bottom: 15, left: 2, right: 2 }}
 				>
 					<View>
 						<Image style={postFooter.image} source={ImagePath.comment} />
@@ -72,7 +72,7 @@ function Post() {
 					onPress={() => {
 						alert('share');
 					}}
-					hitSlop={{ top: 20, bottom: 20, left: 20, right: 20 }}
+					hitSlop={{ top: 15, bottom: 15, left: 2, right: 2 }}
 				>
 					<View>
 						<Image style={postFooter.image} source={ImagePath.share} />

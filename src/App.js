@@ -8,7 +8,7 @@
 
 import React from 'react';
 import { View } from 'react-native';
-import Home from './container/Home';
+import Home from './screens/Home';
 
 const App = () => {
 	return (
