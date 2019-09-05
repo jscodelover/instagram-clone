@@ -6,16 +6,31 @@
  * @flow
  */
 
-import React from 'react';
-import { View } from 'react-native';
+import { createSwitchNavigator, createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import Login from './screens/Login';
 import Home from './screens/Home';
 
-const App = () => {
-	return (
-		<View>
-			<Home />
-		</View>
-	);
-};
+const AppStack = createStackNavigator({ Home });
+const AuthStack = createStackNavigator(
+	{ Login },
+	{
+		headerMode: 'none',
+		navigationOptions: {
+			headerVisible: false
+		}
+	}
+);
 
+const App = createAppContainer(
+	createSwitchNavigator(
+		{
+			AppScreen: AppStack,
+			AuthScreen: AuthStack
+		},
+		{
+			initialRouteName: 'AuthScreen'
+		}
+	)
+);
 export default App;
