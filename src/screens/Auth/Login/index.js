@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, TextInput, Image } from 'react-native';
-import LoginFooter from './LoginFooter';
-import OtherOption from './OtherOption';
-import { ImagePath } from '../../utils/contants';
+import LoginFooter from '../LoginFooter';
+import OtherOption from '../OtherOption';
+import ScreenChange from '../ScreenChange';
+import { ImagePath } from '../../../utils/contants';
 import { LoginPage } from './style';
 
 function Login(props) {
@@ -19,7 +20,7 @@ function Login(props) {
 						style={[LoginPage.inputField, LoginPage.pad]}
 						onChangeText={text => handleUserId(text)}
 						value={userId}
-						placeholder='Phone numbe, email address or username'
+						placeholder='Phone number, email address or username'
 						placeholderTextColor='rgb(130, 130, 130)'
 						autoCapitalize={'none'}
 						autoCorrect={false}
@@ -40,23 +41,18 @@ function Login(props) {
 					<TouchableOpacity
 						style={[LoginPage.btnContainer, LoginPage.pad]}
 						onPress={() => {
-							props.navigation.navigate('register');
+							props.navigation.navigate('Home');
 						}}
 					>
 						<Text style={[LoginPage.textWhite, LoginPage.btnText]}>Log In</Text>
 					</TouchableOpacity>
-					<View style={LoginPage.OtherLinkContainer}>
-						<Text style={LoginPage.plainText}>
-							Forgotten your login details?
-						</Text>
-						<TouchableOpacity
-							onPress={() => {
-								props.navigation.navigate('forget-pwd');
-							}}
-						>
-							<Text style={LoginPage.textBold}> Get help with signing in.</Text>
-						</TouchableOpacity>
-					</View>
+
+					<ScreenChange
+						{...props}
+						text='Forgotten your login details?'
+						screen='ForgetPwd'
+						label='Get help with signing in.'
+					/>
 					<TouchableOpacity style={LoginPage.fbContainer}>
 						<Image
 							style={{ width: 20, height: 20 }}
@@ -67,16 +63,13 @@ function Login(props) {
 						</Text>
 					</TouchableOpacity>
 					<OtherOption />
-					<View style={LoginPage.OtherLinkContainer}>
-						<Text style={LoginPage.plainText}>Don't have an account?</Text>
-						<TouchableOpacity
-							onPress={() => {
-								props.navigation.navigate('register');
-							}}
-						>
-							<Text style={LoginPage.textBold}> Sign Up.</Text>
-						</TouchableOpacity>
-					</View>
+
+					<ScreenChange
+						{...props}
+						text="Don't have an account?"
+						screen='Register'
+						label='Sign Up.'
+					/>
 				</View>
 			) : (
 				<View style={[LoginPage.container, LoginPage.entry]}>
@@ -84,7 +77,7 @@ function Login(props) {
 					<TouchableOpacity
 						style={LoginPage.btnContainer}
 						onPress={() => {
-							props.navigation.navigate('register');
+							props.navigation.navigate('Register');
 						}}
 					>
 						<Text style={[LoginPage.textWhite, LoginPage.btnText]}>

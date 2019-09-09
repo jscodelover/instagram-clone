@@ -8,9 +8,6 @@ const LoginPage = StyleSheet.create({
 		paddingVertical: 13,
 		paddingHorizontal: 20
 	},
-	textBold: {
-		fontWeight: 'bold'
-	},
 	container: {
 		justifyContent: 'center',
 		alignItems: 'center'
@@ -48,13 +45,6 @@ const LoginPage = StyleSheet.create({
 		marginBottom: 15,
 		fontSize: 16
 	},
-	OtherLinkContainer: {
-		marginTop: 12,
-		flexDirection: 'row'
-	},
-	plainText: {
-		color: 'rgb(120, 120, 120)'
-	},
 	fbContainer: {
 		flexDirection: 'row',
 		marginTop: 30,
@@ -64,7 +54,8 @@ const LoginPage = StyleSheet.create({
 	fbTxt: {
 		color: 'rgb(62, 152, 236)',
 		fontSize: 16,
-		marginLeft: 10
+		marginLeft: 10,
+		fontWeight: 'bold'
 	}
 });
 
