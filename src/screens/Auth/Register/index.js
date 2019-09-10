@@ -16,16 +16,26 @@ function Register(props) {
 				<Image source={ImagePath.profile} style={{ width: 200, height: 200 }} />
 				<View style={RegisterPage.regOption}>
 					<TouchableOpacity
-						style={RegisterPage.optionBtn}
+						style={[
+							RegisterPage.optionBtn,
+							type === 2 && RegisterPage.inactiveOption
+						]}
 						onPress={() => handleType(1)}
 					>
-						<Text>PHONE NUMBER</Text>
+						<Text style={[type === 2 && RegisterPage.inactiveText]}>
+							PHONE NUMBER
+						</Text>
 					</TouchableOpacity>
 					<TouchableOpacity
-						style={RegisterPage.optionBtn}
+						style={[
+							RegisterPage.optionBtn,
+							type === 1 && RegisterPage.inactiveOption
+						]}
 						onPress={() => handleType(2)}
 					>
-						<Text>EMAIL ADDRESS</Text>
+						<Text style={[type === 1 && RegisterPage.inactiveText]}>
+							EMAIL ADDRESS
+						</Text>
 					</TouchableOpacity>
 				</View>
 				{type === 1 ? (
@@ -51,7 +61,7 @@ function Register(props) {
 						</Text>
 						<CustomButton
 							type={1}
-							style={[GlobalStyle.btnPad]}
+							style={[GlobalStyle.btnPad, !mobile && GlobalStyle.lightBlue]}
 							onPress={() => console.log('phone no.')}
 							label='Next'
 						/>
@@ -71,7 +81,7 @@ function Register(props) {
 						/>
 						<CustomButton
 							type={1}
-							style={[GlobalStyle.btnPad]}
+							style={[GlobalStyle.btnPad, !email && GlobalStyle.lightBlue]}
 							onPress={() => console.log('email')}
 							label='Next'
 						/>

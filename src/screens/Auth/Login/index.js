@@ -46,7 +46,11 @@ function Login(props) {
 					/>
 					<CustomButton
 						type={1}
-						style={[GlobalStyle.btnPad, GlobalStyle.mb12]}
+						style={[
+							GlobalStyle.btnPad,
+							GlobalStyle.mb12,
+							!pwd && !userId && GlobalStyle.lightBlue
+						]}
 						onPress={() => handleNavigation('Home')}
 						label='Log In'
 					/>

@@ -33,6 +33,12 @@ const RegisterPage = StyleSheet.create({
 		paddingBottom: 10,
 		alignItems: 'center'
 	},
+	inactiveOption: {
+		borderBottomColor: 'rgb(190, 191, 194)'
+	},
+	inactiveText: {
+		color: 'rgb(190, 191, 194)'
+	},
 	phoneContainer: {
 		borderColor: 'rgb(150, 150, 150)',
 		borderWidth: 1,

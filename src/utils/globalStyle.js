@@ -14,6 +14,9 @@ const GlobalStyle = StyleSheet.create({
 	},
 	mb12: {
 		marginBottom: 12
+	},
+	lightBlue: {
+		backgroundColor: 'rgb(163, 207, 247)'
 	}
 });
 
