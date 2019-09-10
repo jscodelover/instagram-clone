@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { Font } from '../../utils/contants';
 
 const styles = StyleSheet.create({
 	container: {
@@ -10,7 +11,8 @@ const styles = StyleSheet.create({
 		height: 30
 	},
 	heading: {
-		fontSize: 22
+		fontSize: 22,
+		fontFamily: Font.DancingScript_Bold
 	},
 	messageBtn: {
 		width: 22,

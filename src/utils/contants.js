@@ -20,4 +20,11 @@ const ImagePath = {
 	profile: require('../assets/img/profile.png')
 };
 
-export { ImagePath };
+const Font = {
+	NewsCycle_Regular: 'NewsCycle-Regular',
+	NewsCycle_Bold: 'NewsCycle-Bold',
+	DancingScript_Regular: 'DancingScript-Regular',
+	DancingScript_Bold: 'DancingScript-Bold'
+};
+
+export { ImagePath, Font };

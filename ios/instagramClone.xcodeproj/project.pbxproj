@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* instagramCloneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* instagramCloneTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
@@ -20,6 +19,10 @@
 		5CEEE64E053ED2EF2C28F4F1 /* libPods-instagramClone-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFAF823CEC987BBB058E7D9 /* libPods-instagramClone-tvOS.a */; };
 		CBAC2C5C2624B5C6C1AFE960 /* libPods-instagramClone-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 466B13143DF1AD9FE2699186 /* libPods-instagramClone-tvOSTests.a */; };
 		DA1E321EDA20108B4C5FCD81 /* libPods-instagramCloneTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C43659CF1DF779AF5A67993 /* libPods-instagramCloneTests.a */; };
+		10257D92E1FD4C2683D84038 /* DancingScript-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43D9E564C96045ADB26B1C06 /* DancingScript-Bold.ttf */; };
+		BAB558D9E93B4413AF78E5F4 /* DancingScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FF51C9BAE444CB3B4933502 /* DancingScript-Regular.ttf */; };
+		A7B16BBBBB684CBFA3048364 /* NewsCycle-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0ED68160072D4CEE81B26EA6 /* NewsCycle-Bold.ttf */; };
+		152A9D3D685A423DA17E328F /* NewsCycle-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D07A207386D48F7868D524A /* NewsCycle-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,10 @@
 		EACD512AECD50FDF88B8D171 /* Pods-instagramClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagramClone.release.xcconfig"; path = "Target Support Files/Pods-instagramClone/Pods-instagramClone.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		43D9E564C96045ADB26B1C06 /* DancingScript-Bold.ttf */ = {isa = PBXFileReference; name = "DancingScript-Bold.ttf"; path = "../src/assets/fonts/DancingScript-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8FF51C9BAE444CB3B4933502 /* DancingScript-Regular.ttf */ = {isa = PBXFileReference; name = "DancingScript-Regular.ttf"; path = "../src/assets/fonts/DancingScript-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0ED68160072D4CEE81B26EA6 /* NewsCycle-Bold.ttf */ = {isa = PBXFileReference; name = "NewsCycle-Bold.ttf"; path = "../src/assets/fonts/NewsCycle-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0D07A207386D48F7868D524A /* NewsCycle-Regular.ttf */ = {isa = PBXFileReference; name = "NewsCycle-Regular.ttf"; path = "../src/assets/fonts/NewsCycle-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +172,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				9AD1BC1D4B86A9AD4FA754EF /* Pods */,
+				465CFC0A41CE4D8E9C0EC629 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -197,6 +205,18 @@
 			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		465CFC0A41CE4D8E9C0EC629 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				43D9E564C96045ADB26B1C06 /* DancingScript-Bold.ttf */,
+				8FF51C9BAE444CB3B4933502 /* DancingScript-Regular.ttf */,
+				0ED68160072D4CEE81B26EA6 /* NewsCycle-Bold.ttf */,
+				0D07A207386D48F7868D524A /* NewsCycle-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -285,7 +305,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -338,6 +358,10 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				10257D92E1FD4C2683D84038 /* DancingScript-Bold.ttf in Resources */,
+				BAB558D9E93B4413AF78E5F4 /* DancingScript-Regular.ttf in Resources */,
+				A7B16BBBBB684CBFA3048364 /* NewsCycle-Bold.ttf in Resources */,
+				152A9D3D685A423DA17E328F /* NewsCycle-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

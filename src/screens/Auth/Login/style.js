@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { Font } from '../../../utils/contants';
 
 const LoginPage = StyleSheet.create({
 	container: {
@@ -12,9 +13,10 @@ const LoginPage = StyleSheet.create({
 		height: '100%'
 	},
 	header: {
-		fontSize: 30,
+		fontSize: 35,
 		fontWeight: 'bold',
-		marginBottom: 50
+		marginBottom: 50,
+		fontFamily: Font.DancingScript_Bold
 	},
 	loginBtn: {
 		marginTop: 30
