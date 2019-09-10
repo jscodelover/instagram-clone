@@ -19,7 +19,6 @@ function ScreenChange(props) {
 
 const styles = StyleSheet.create({
 	OtherLinkContainer: {
-		marginTop: 12,
 		flexDirection: 'row'
 	},
 	plainText: {

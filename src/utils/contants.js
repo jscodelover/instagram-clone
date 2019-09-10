@@ -16,7 +16,8 @@ const ImagePath = {
 	share: require('../assets/img/share.png'),
 	tag: require('../assets/img/tag.png'),
 	user: require('../assets/img/user.png'),
-	facebook: require('../assets/img/fb.png')
+	facebook: require('../assets/img/fb.png'),
+	profile: require('../assets/img/profile.png')
 };
 
 export { ImagePath };

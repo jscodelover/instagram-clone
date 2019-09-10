@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, TextInput, Image } from 'react-native';
+import { InputBox, CustomButton } from '../../../components';
 import LoginFooter from '../LoginFooter';
 import OtherOption from '../OtherOption';
 import ScreenChange from '../ScreenChange';
 import { ImagePath } from '../../../utils/contants';
+import GlobalStyle from '../../../utils/globalStyle';
 import { LoginPage } from './style';
 
 function Login(props) {
@@ -11,25 +13,29 @@ function Login(props) {
 	const [userId, handleUserId] = useState('');
 	const [pwd, handlePwd] = useState('');
 
+	function handleNavigation(location) {
+		props.navigation.navigate(location);
+	}
+
 	return (
 		<>
 			{loginBox ? (
 				<View style={[LoginPage.container, LoginPage.login]}>
 					<Text style={LoginPage.header}>Instagram</Text>
-					<TextInput
-						style={[LoginPage.inputField, LoginPage.pad]}
-						onChangeText={text => handleUserId(text)}
-						value={userId}
+					<InputBox
+						type={1}
+						handlechange={text => handleUserId(text)}
+						val={userId}
 						placeholder='Phone number, email address or username'
 						placeholderTextColor='rgb(130, 130, 130)'
 						autoCapitalize={'none'}
 						autoCorrect={false}
 						returnKeyType='next'
 					/>
-					<TextInput
-						style={[LoginPage.inputField, LoginPage.pad]}
-						onChangeText={text => handlePwd(text)}
-						value={pwd}
+					<InputBox
+						type={1}
+						handlechange={text => handlePwd(text)}
+						val={pwd}
 						placeholder='Password'
 						placeholderTextColor='rgb(130, 130, 130)'
 						textContentType='password'
@@ -38,15 +44,12 @@ function Login(props) {
 						returnKeyType='go'
 						secureTextEntry={true}
 					/>
-					<TouchableOpacity
-						style={[LoginPage.btnContainer, LoginPage.pad]}
-						onPress={() => {
-							props.navigation.navigate('Home');
-						}}
-					>
-						<Text style={[LoginPage.textWhite, LoginPage.btnText]}>Log In</Text>
-					</TouchableOpacity>
-
+					<CustomButton
+						type={1}
+						style={[GlobalStyle.btnPad, GlobalStyle.mb12]}
+						onPress={() => handleNavigation('Home')}
+						label='Log In'
+					/>
 					<ScreenChange
 						{...props}
 						text='Forgotten your login details?'
@@ -63,7 +66,6 @@ function Login(props) {
 						</Text>
 					</TouchableOpacity>
 					<OtherOption />
-
 					<ScreenChange
 						{...props}
 						text="Don't have an account?"
@@ -74,16 +76,11 @@ function Login(props) {
 			) : (
 				<View style={[LoginPage.container, LoginPage.entry]}>
 					<Text style={LoginPage.header}>Instagram</Text>
-					<TouchableOpacity
-						style={LoginPage.btnContainer}
-						onPress={() => {
-							props.navigation.navigate('Register');
-						}}
-					>
-						<Text style={[LoginPage.textWhite, LoginPage.btnText]}>
-							Create New Account
-						</Text>
-					</TouchableOpacity>
+					<CustomButton
+						type={1}
+						onPress={() => handleNavigation('Register')}
+						label='Create New Account'
+					/>
 					<TouchableOpacity
 						style={LoginPage.loginBtn}
 						onPress={() => {
@@ -91,7 +88,7 @@ function Login(props) {
 						}}
 						hitSlop={{ top: 10, bottom: 10, left: 20, right: 20 }}
 					>
-						<Text style={LoginPage.btnText}>Log In</Text>
+						<Text style={GlobalStyle.btnText}>Log In</Text>
 					</TouchableOpacity>
 				</View>
 			)}
