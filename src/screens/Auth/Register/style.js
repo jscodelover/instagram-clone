@@ -45,11 +45,13 @@ const RegisterPage = StyleSheet.create({
 		borderRadius: 5,
 		backgroundColor: 'rgb(248, 248, 248)',
 		width: '90%',
+		height: 50,
 		marginBottom: 15,
 		fontSize: 16,
 		paddingVertical: 13,
 		paddingHorizontal: 20,
-		flexDirection: 'row'
+		flexDirection: 'row',
+		alignItems: 'center'
 	},
 	prefix: {
 		color: 'rgb(120, 120, 120)',
@@ -60,6 +62,9 @@ const RegisterPage = StyleSheet.create({
 		borderColor: 'rgb(150, 150, 150)',
 		borderWidth: StyleSheet.hairlineWidth,
 		marginHorizontal: 10
+	},
+	phoneInput: {
+		height: 50
 	},
 	msg: {
 		color: 'rgb(130, 130, 130)',

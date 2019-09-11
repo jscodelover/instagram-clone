@@ -45,6 +45,7 @@ function Register(props) {
 							<Text style={RegisterPage.bar} />
 							<InputBox
 								type={2}
+								style={RegisterPage.phoneInput}
 								handlechange={text => handleMobile(text)}
 								val={mobile}
 								placeholder='Phone number'

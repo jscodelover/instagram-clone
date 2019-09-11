@@ -62,7 +62,8 @@ const styles = StyleSheet.create({
 		marginBottom: 15,
 		fontSize: 16,
 		paddingVertical: 13,
-		paddingHorizontal: 20
+		paddingHorizontal: 20,
+		height: 50
 	},
 	plainField: {
 		borderWidth: 0,

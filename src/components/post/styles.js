@@ -52,7 +52,7 @@ const postFooter = StyleSheet.create({
 	footer: {
 		borderBottomColor: 'rgb(210, 210, 210)',
 		borderBottomWidth: StyleSheet.hairlineWidth,
-		marginHorizontal: 15
+		marginHorizontal: 18
 	},
 	likeFooter: {
 		marginHorizontal: 0,

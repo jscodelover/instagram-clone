@@ -14,7 +14,6 @@ const LoginPage = StyleSheet.create({
 	},
 	header: {
 		fontSize: 35,
-		fontWeight: 'bold',
 		marginBottom: 50,
 		fontFamily: Font.DancingScript_Bold
 	},

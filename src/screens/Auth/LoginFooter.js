@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { Font } from '../../utils/contants';
 
 function LoginFooter() {
 	return (
@@ -23,7 +24,8 @@ const styles = StyleSheet.create({
 		justifyContent: 'center'
 	},
 	footerTxt: {
-		color: 'rgb(130, 130, 130)'
+		color: 'rgb(130, 130, 130)',
+		fontFamily: Font.NewsCycle_Bold
 	}
 });
 
